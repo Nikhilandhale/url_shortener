@@ -6,10 +6,11 @@ A MongoDB Atlas account (for database hosting)
 FastAPI and its dependencies
 
 Clone the Repository:
-git clone <your-repo-url>
+git clone <"your-repo-url">
 
 Set Up a Virtual Environment:
 python -m venv venv
+
 source venv/bin/activate
 
 Install Packages:
@@ -18,7 +19,9 @@ pip install fastapi pymongo uvicorn python-dotenv
 
 Set Up MongoDB:
 Create a MongoDB Atlas account
-Set up a cluster and create a database named "url_shortener_db" with Collection named "urls"
+Set up a cluster and create a 
+database named "url_shortener_db" 
+Collection named "urls"
 Update the MongoDB connection string in the code with your credentials
 
 
@@ -32,6 +35,7 @@ password "Nikhil"
       Running the Application
 
 To start the FastAPI server, run:
+
 uvicorn server:app --reload
 
             Design Decisions and Trade-offs
