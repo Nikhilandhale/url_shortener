@@ -1,82 +1,169 @@
-      Setup and Execution Steps
-      
-Prerequisites:
-Python 3.7 or higher
-A MongoDB Atlas account (for database hosting)
-FastAPI and its dependencies
+Here’s a **ready-to-copy-paste README.md** (clean + professional + GitHub ready):
 
-Clone the Repository:
-git clone <"your-repo-url">
+````md
+# URL Shortener API 🚀
 
-Set Up a Virtual Environment:
+A simple URL shortener service built using **FastAPI** and **MongoDB Atlas**.  
+It allows users to shorten long URLs, use custom codes, set expiration time, and track URL usage.
+
+---
+
+## ⚙️ Tech Stack
+- Python 3.7+
+- FastAPI
+- MongoDB Atlas
+- PyMongo
+- Uvicorn
+- python-dotenv
+
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd <your-project-folder>
+````
+
+---
+
+### 2. Create virtual environment
+
+```bash
 python -m venv venv
+```
 
+Activate it:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Mac/Linux**
+
+```bash
 source venv/bin/activate
+```
 
-Install Packages:
-pip install fastapi pymongo uvicorn python-dotenv 
+---
 
+### 3. Install dependencies
 
-Set Up MongoDB:
-Create a MongoDB Atlas account
-Set up a cluster and create a 
-database named "url_shortener_db" 
-Collection named "urls"
-Update the MongoDB connection string in the code with your credentials
+```bash
+pip install fastapi pymongo uvicorn python-dotenv
+```
 
+---
 
-My Connection String:
-"mongodb+srv://Nikhil:Nikhil@urlshortnerdb.bcpa9.mongodb.net/"
+## 🗄️ MongoDB Setup
 
-Credentials:
-username "Nikhil"
-password "Nikhil"
+* Create a MongoDB Atlas account
+* Create a cluster
+* Create a database: `url_shortener_db`
+* Create a collection: `urls`
+* Copy your MongoDB connection string and add it in the project
 
-      Running the Application
+Example connection string:
 
-To start the FastAPI server, run:
+```
+mongodb+srv://Nikhil:Nikhil@urlshortnerdb.bcpa9.mongodb.net/
+```
 
+---
+
+## ▶️ Run the Project
+
+Start the FastAPI server:
+
+```bash
 uvicorn server:app --reload
+```
 
-            Design Decisions and Trade-offs
-            
-MongoDB for Storage: I chose MongoDB for its flexibility in handling dynamic data and its scalability to accommodate future growth.
+Server will run at:
 
-Expiration Mechanism: I implemented an expiration feature to allow URLs to expire after a defined period, ensuring that the database remains clutter-free and only stores relevant data.
+```
+http://127.0.0.1:8000
+```
 
-Custom Code Option: Users can specify a custom short code, enhancing the user experience by allowing memorable links.
+---
 
-Basic Rate Limiting: A simple middleware is in place to manage the number of requests from individual clients, helping to prevent abuse.
+## 📌 API Endpoint
 
-            Implemented Features
-            
-URL Shortening: Users can convert long URLs into shorter ones.
+### Shorten URL
 
-Redirection: Users can access the original URLs through the shortened links.
+**Endpoint:**
 
-Custom Short Codes: Users can provide a custom code for their shortened URL.
+```
+POST /url/shorten
+```
 
-Expiration Time: Users can set a duration for how long the shortened URL should be valid.
+**URL:**
 
-Access Count Tracking: The service keeps track of how many times each shortened URL has been accessed.
+```
+http://localhost:8000/url/shorten
+```
 
-            Deviations from Original Requirements
-            
-I set a default expiration time of 5 minutes if the user does not provide one.
+**Request Body:**
 
-Rate limiting is currently basic and may require further enhancement based on traffic patterns.
-
-            Testing Instructions
-            
-You can test the API using tools like Postman
-
-            POST Request
-            
-Endpoint: http://localhost:8000/url/shorten
-Method: POST
-Body(Json):
+```json
 {
-"url": "https://www.reevv.com",
-"custom_code": "mycustomcode",  
- "expiration_minutes": 5
+  "url": "https://www.reevv.com",
+  "custom_code": "mycustomcode",
+  "expiration_minutes": 5
 }
+```
+
+---
+
+## ✨ Features
+
+* URL shortening
+* Custom short codes
+* URL expiration system
+* Redirect to original URL
+* Click tracking
+
+---
+
+## 🧠 Design Decisions
+
+* MongoDB used for flexible schema and scalability
+* Expiration system keeps database clean
+* Custom codes improve user experience
+* Basic rate limiting added for abuse protection
+
+---
+
+## ⚠️ Notes
+
+* Default expiration time is **5 minutes**
+* Rate limiting is basic and can be improved for production use
+
+---
+
+## 🧪 Testing
+
+You can test using:
+
+* Postman
+* Thunder Client (VS Code)
+* cURL
+
+---
+
+## 🚀 Future Improvements
+
+* Advanced rate limiting
+* User authentication
+* Analytics dashboard
+* Better validation and error handling
+
+```
+
+If you want, I can also make it:
+- 🔥 more “startup style” README (with badges + logo + screenshots)
+- 💼 or resume/portfolio version (very high impact)
+```
