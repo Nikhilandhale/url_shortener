@@ -62,12 +62,12 @@ pip install fastapi pymongo uvicorn python-dotenv
 * Create a cluster
 * Create a database: `url_shortener_db`
 * Create a collection: `urls`
-* Copy your MongoDB connection string and add it in the project
+* Add your MongoDB connection string in `.env` file
 
 Example connection string:
 
 ```
-mongodb+srv://Nikhil:Nikhil@urlshortnerdb.bcpa9.mongodb.net/
+MONGO_URI=your_mongodb_connection_string_here
 ```
 
 ---
