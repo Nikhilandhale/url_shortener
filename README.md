@@ -160,8 +160,3 @@ You can test using:
 * Better validation and error handling
 
 ```
-
-If you want, I can also make it:
-- 🔥 more “startup style” README (with badges + logo + screenshots)
-- 💼 or resume/portfolio version (very high impact)
-```
