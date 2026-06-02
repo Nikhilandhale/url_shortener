@@ -1,5 +1,3 @@
-Here’s a **ready-to-copy-paste README.md** (clean + professional + GitHub ready):
-
 ````md
 # URL Shortener API 🚀
 
